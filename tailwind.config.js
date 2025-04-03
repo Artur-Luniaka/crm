@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        mdx: "1280px",
+        mdx: "1440px",
       },
       container: {
         center: true,
         padding: {
           DEFAULT: "1rem",
-          mdx: "2rem",
+          mdx: "1rem",
         },
       },
       fontFamily: {
