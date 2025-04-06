@@ -3,7 +3,7 @@
 const page = () => {
   return (
     <div>
-      <h1>Companies</h1>
+      <h1 className="font-poppins text-3xl">Companies</h1>
     </div>
   );
 };
