@@ -1,11 +1,18 @@
 "use client";
 
-const page = () => {
+import Header from "@/app/components/Header/Header";
+import { useEffect } from "react";
+
+const Page = () => {
+  useEffect(() => {
+    document.title = "Dashboard | CRM";
+  }, []);
+
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 
-export default page;
+export default Page;

@@ -1,11 +1,18 @@
 "use client";
 
-const page = () => {
+import Header from "@/app/components/Header/Header";
+import { useEffect } from "react";
+
+const Page = () => {
+  useEffect(() => {
+    document.title = "Companies | CRM";
+  }, []);
+
   return (
-    <div>
-      <h1 className="font-poppins text-3xl">Companies</h1>
-    </div>
+    <>
+      <Header />
+    </>
   );
 };
 
-export default page;
+export default Page;

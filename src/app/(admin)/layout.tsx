@@ -18,7 +18,7 @@ const layout = ({
         </div>
         <ExitLink />
       </aside>
-      <div>{children}</div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 };
