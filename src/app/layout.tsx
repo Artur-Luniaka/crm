@@ -1,12 +1,12 @@
 import "./globals.css";
 import { Inter, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 
-export const inter = Inter({ subsets: ["latin"], weight: ["400"] });
-export const plusJakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({ subsets: ["latin"], weight: ["400"] });
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
-export const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600"] });
 
 export const metadata = {
   title: "Home | CRM",
@@ -20,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={`${inter.className} ${jakarta.className} ${poppins.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
