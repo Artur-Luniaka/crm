@@ -11,14 +11,14 @@ const layout = ({
 }>) => {
   return (
     <div className="flex">
-      <aside className="flex flex-col justify-between w-[240px] h-[100vh] bg-[#111827] px-4 py-8">
+      <aside className="flex flex-col justify-between min-w-[240px] h-[100vh] bg-[#111827] px-4 py-8">
         <div>
           <AsideLogo />
           <AsideNavLinksBox />
         </div>
         <ExitLink />
       </aside>
-      <div className="flex-1">{children}</div>
+      <div className="min-w-[1200px] w-full">{children}</div>
     </div>
   );
 };
