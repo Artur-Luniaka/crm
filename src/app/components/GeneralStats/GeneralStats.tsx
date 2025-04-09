@@ -5,10 +5,10 @@ import stats from "../../../fakeAPI/generalStats.json";
 
 const GeneralStats = () => {
   return (
-    <div className="flex">
+    <div className="w-full mb-5">
       <ul className="flex gap-5">
         <li
-          className="w-[268px] h-[152px] p-7 rounded-[4px] relative"
+          className="w-[268px] p-7 rounded-[4px] relative"
           style={{
             background: `radial-gradient(circle at 20% 30%, #FFFFFF, transparent 40%),
                  radial-gradient(circle at 80% 20%, #D9F99D, transparent 50%),

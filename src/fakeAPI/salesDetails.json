@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Costco Wholesale",
+    "id": 1,
+    "price": "$600",
+    "sold": 459,
+    "logo": "/company_icon"
+  },
+  {
+    "name": "Costco Wholesale",
+    "id": 2,
+    "price": "$600",
+    "sold": 459
+  },
+  {
+    "name": "Costco Wholesale",
+    "id": 3,
+    "price": "$600",
+    "sold": 459
+  },
+  {
+    "name": "Costco Wholesale",
+    "id": 4,
+    "price": "$600",
+    "sold": 459
+  },
+  {
+    "name": "Costco Wholesale",
+    "id": 5,
+    "price": "$600",
+    "sold": 459
+  },
+  {
+    "name": "Costco Wholesale",
+    "id": 6,
+    "price": "$600",
+    "sold": 459
+  }
+]

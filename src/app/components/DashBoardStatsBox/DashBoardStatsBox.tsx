@@ -6,7 +6,7 @@ const DashBoardStatsBox = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  return <div className="p-10 min-w-[1200px] w-full">{children}</div>;
+  return <div className="w-full p-10">{children}</div>;
 };
 
 export default DashBoardStatsBox;
