@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "country": "Canada",
+    "companies": 4
+  },
+  {
+    "id": 2,
+    "country": "USA",
+    "companies": 4
+  },
+  {
+    "id": 3,
+    "country": "Italia",
+    "companies": 2
+  },
+  {
+    "id": 4,
+    "country": "Ukraine",
+    "companies": 2
+  },
+  {
+    "id": 5,
+    "country": "Spain",
+    "companies": 2
+  }
+]

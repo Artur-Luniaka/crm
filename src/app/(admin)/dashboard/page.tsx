@@ -1,6 +1,7 @@
 "use client";
 
 import CategoriesOfCompanies from "@/app/components/CategoriesOfCompanies/CategoriesOfCompanies";
+import CountriesOfCompanies from "@/app/components/CountriesOfCompanies/CountriesOfCompanies";
 import DashBoardStatsBox from "@/app/components/DashBoardStatsBox/DashBoardStatsBox";
 import GeneralStats from "@/app/components/GeneralStats/GeneralStats";
 import Header from "@/app/components/Header/Header";
@@ -17,10 +18,11 @@ const Page = () => {
       <Header />
       <DashBoardStatsBox>
         <GeneralStats />
-        <div className="flex gap-5">
+        <div className="flex gap-5 mb-5">
           <SalesDetails />
           <CategoriesOfCompanies />
         </div>
+        <CountriesOfCompanies />
       </DashBoardStatsBox>
     </>
   );
