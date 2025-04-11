@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Active",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 2,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Not active",
+    "Promotion": "No",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 3,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Pending",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 4,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Suspended",
+    "Promotion": "No",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 5,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Active",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 6,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Not active",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 7,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Pending",
+    "Promotion": "No",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 8,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Suspended",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 9,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Not active",
+    "Promotion": "No",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 10,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Pending",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  },
+  {
+    "id": 11,
+    "Category": "Products",
+    "Company": "Costco Wholesale",
+    "Status": "Pending",
+    "Promotion": "Yes",
+    "Country": "USA",
+    "JoinedDate": "19.02.2023"
+  }
+]
