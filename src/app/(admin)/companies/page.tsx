@@ -1,6 +1,7 @@
 "use client";
 
 import CompaniesInfoBox from "@/app/components/CompaniesInfoBox/CompaniesInfoBox";
+import CompaniesInfoTable from "@/app/components/CompaniesInfoTable/CompaniesInfoTable";
 import Header from "@/app/components/Header/Header";
 import ManageBlock from "@/app/components/ManageBlock/ManageBlock";
 import { useEffect } from "react";
@@ -15,7 +16,7 @@ const Page = () => {
       <Header />
       <ManageBlock />
       <CompaniesInfoBox>
-        <h1>Hello</h1>
+        <CompaniesInfoTable />
       </CompaniesInfoBox>
     </>
   );
