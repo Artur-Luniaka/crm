@@ -5,6 +5,7 @@ import CountriesOfCompanies from "@/app/components/CountriesOfCompanies/Countrie
 import DashBoardStatsBox from "@/app/components/DashBoardStatsBox/DashBoardStatsBox";
 import GeneralStats from "@/app/components/GeneralStats/GeneralStats";
 import Header from "@/app/components/Header/Header";
+import Promotions from "@/app/components/Promotions/Promotions";
 import SalesDetails from "@/app/components/SalesDetails/SalesDetails";
 import { useEffect } from "react";
 
@@ -22,7 +23,10 @@ const Page = () => {
           <SalesDetails />
           <CategoriesOfCompanies />
         </div>
-        <CountriesOfCompanies />
+        <div className="flex gap-5">
+          <CountriesOfCompanies />
+          <Promotions />
+        </div>
       </DashBoardStatsBox>
     </>
   );
