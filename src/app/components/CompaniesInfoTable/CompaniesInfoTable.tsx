@@ -2,6 +2,8 @@
 
 import info from "@/fakeAPI/companiesInfo.json";
 import icon from "../../../../public/company_icon.svg";
+import check_icon from "../../../../public/check.svg";
+import x_icon from "../../../../public/x-mark.svg";
 import Image from "next/image";
 
 enum Status {
@@ -9,6 +11,11 @@ enum Status {
   NotActive = "Not active",
   Pending = "Pending",
   Suspended = "Suspended",
+}
+
+enum Promotion {
+  Yes = "Yes",
+  No = "No",
 }
 
 const colors = [
@@ -25,7 +32,7 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 const CompaniesInfoTable = () => {
   return (
     <div>
-      <div className="flex justify-between mb-5 px-3">
+      <div className="flex justify-between mb-5 px-2">
         <h2 className="font-jakarta font-light text-sm text-[#111827]">
           Category
         </h2>
@@ -54,55 +61,76 @@ const CompaniesInfoTable = () => {
               borderLeft: `4px solid ${randomColor}`,
             }}
           >
-            <p
-              className="font-jakarta font-medium text-xs"
-              style={{
-                color: `${randomColor}`,
-              }}
-            >
-              {item.Category}
-            </p>
-            <span className="flex items-center justify-center gap-4">
+            <div className="flex flex-shrink-0 flex-grow-0 w-[60px]">
+              <p
+                className="font-jakarta font-medium text-xs"
+                style={{
+                  color: `${randomColor}`,
+                }}
+              >
+                {item.Category}
+              </p>
+            </div>
+            <div className="flex items-center justify-center gap-4 flex-shrink-0 flex-grow-0 w-[220px]">
               <Image src={icon} alt="company logo" width={32} height={32} />
               <p className="font-jakarta font-medium text-sm">{item.Company}</p>
-            </span>
+            </div>
             {Status.Active === item.Status && (
-              <span className="flex justify-center items-center gap-2 py-1 px-3.5 bg-[#dcfce7] rounded-[28px]">
+              <div className="flex justify-center items-center gap-2 py-1 px-3 bg-[#dcfce7] rounded-[28px] flex-shrink-0 flex-grow-0 w-[120px]">
                 <div className="w-1 h-1 rounded-full bg-[#15803d]" />
                 <p className="font-jakarta font-medium text-sm text-[#15803d]">
                   {item.Status}
                 </p>
-              </span>
+              </div>
             )}
             {Status.NotActive === item.Status && (
-              <span className="flex justify-center items-center gap-2 py-1 px-3.5 bg-[#fee2e2] rounded-[28px]">
+              <div className="flex justify-center items-center gap-2 py-1 px-3 bg-[#fee2e2] rounded-[28px] flex-shrink-0 flex-grow-0 w-[120px]">
                 <div className="w-1 h-1 rounded-full bg-[#b91c1c]" />
                 <p className="font-jakarta font-medium text-sm text-[#b91c1c]">
                   {item.Status}
                 </p>
-              </span>
+              </div>
             )}
             {Status.Pending === item.Status && (
-              <span className="flex justify-center items-center gap-2 py-1 px-3.5 bg-[#ffedd5] rounded-[28px]">
+              <div className="flex justify-center items-center gap-2 py-1 px-3 bg-[#ffedd5] rounded-[28px] flex-shrink-0 flex-grow-0 w-[120px]">
                 <div className="w-1 h-1 rounded-full bg-[#c2410c]" />
                 <p className="font-jakarta font-medium text-sm text-[#c2410c]">
                   {item.Status}
                 </p>
-              </span>
+              </div>
             )}
             {Status.Suspended === item.Status && (
-              <span className="flex justify-center items-center gap-2 py-1 px-3.5 bg-[#dbeafe] rounded-[28px]">
+              <div className="flex justify-center items-center gap-2 py-1 px-3 bg-[#dbeafe] rounded-[28px] flex-shrink-0 flex-grow-0 w-[120px]">
                 <div className="w-1 h-1 rounded-full bg-[#1d4ed8]" />
                 <p className="font-jakarta font-medium text-sm text-[#1d4ed8]">
                   {item.Status}
                 </p>
-              </span>
+              </div>
             )}
-            <p className="font-jakarta font-medium text-sm">{item.Promotion}</p>
-            <p className="font-jakarta font-medium text-sm">{item.Country}</p>
-            <p className="font-jakarta font-medium text-sm">
-              {item.JoinedDate}
-            </p>
+            {Promotion.Yes === item.Promotion && (
+              <div className="flex gap-1 flex-shrink-0 flex-grow-0 w-[100px]">
+                <Image src={check_icon} alt="check icon" />
+                <p className="font-jakarta font-medium text-sm text-[#15803d]">
+                  {item.Promotion}
+                </p>
+              </div>
+            )}
+            {Promotion.No === item.Promotion && (
+              <div className="flex gap-1 flex-shrink-0 flex-grow-0 w-[100px]">
+                <Image src={x_icon} alt="check icon" />
+                <p className="font-jakarta font-medium text-sm text-[#b91c1c]">
+                  {item.Promotion}
+                </p>
+              </div>
+            )}
+            <div className="flex flex-shrink-0 flex-grow-0 w-[60px]">
+              <p className="font-jakarta font-medium text-sm">{item.Country}</p>
+            </div>
+            <div className="flex flex-shrink-0 flex-grow-0">
+              <p className="font-jakarta font-medium text-sm">
+                {item.JoinedDate}
+              </p>
+            </div>
           </li>
         ))}
       </ul>
