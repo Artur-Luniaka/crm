@@ -2,8 +2,12 @@
 
 import Image from "next/image";
 import loop from "../../../../public/loop_icon.svg";
+import { useState } from "react";
+import AddCompanyModal from "../AddCompanyModal/AddCompanyModal";
 
 const ManageBlock = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="flex justify-between mb-8 px-10 pt-10">
       <div className="relative">
@@ -20,9 +24,21 @@ const ManageBlock = () => {
           className="absolute top-3.5 right-[7px] cursor-pointer"
         />
       </div>
-      <button className="flex w-[148px] h-11 py-2.5 px-5 bg-[#111827] rounded-[4px] outline-none font-jakarta font-medium text-base text-[#fafafa]">
+      <button
+        className="flex w-[148px] h-11 py-2.5 px-5 bg-[#111827] rounded-[4px] outline-none font-jakarta font-medium text-base text-[#fafafa]"
+        onClick={() => {
+          setIsOpen(true);
+        }}
+      >
         Add company
       </button>
+      {isOpen && (
+        <AddCompanyModal
+          setIsOpen={() => {
+            setIsOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };
