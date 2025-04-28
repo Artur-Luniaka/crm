@@ -3,7 +3,7 @@
 import info from "@/fakeAPI/companiesInfo.json";
 import icon from "../../../../public/company_icon.svg";
 import check_icon from "../../../../public/check.svg";
-import x_icon from "../../../../public/x-mark.svg";
+import x_icon from "../../../../public/x-mark-red.svg";
 import Image from "next/image";
 
 enum Status {
