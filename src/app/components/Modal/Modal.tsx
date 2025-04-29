@@ -21,13 +21,20 @@ const Modal = ({ children, setIsOpen }: ModalProp) => {
     return () => window.removeEventListener("keydown", listener);
   }, [setIsOpen]);
 
+  const handleModalClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
     <div
       className="fixed top-0 left-0 flex justify-center items-center h-[100vh] w-full bg-black/60"
       onClick={setIsOpen}
     >
-      <div className="bg-[#f3f4f6] rounded-lg p-7 relative">
-        <button onClick={setIsOpen} className="absolute top-2 right-2">
+      <div
+        className="bg-[#f3f4f6] rounded-lg p-7 relative"
+        onClick={handleModalClick}
+      >
+        <button onClick={setIsOpen} className="absolute top-3 right-3">
           <Image src={close_btn} alt="close button" width={20} height={20} />
         </button>
         {children}
