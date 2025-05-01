@@ -3,10 +3,17 @@
 import Image from "next/image";
 import loop from "../../../../public/loop_icon.svg";
 import { useState } from "react";
-import AddCompanyModal from "../AddCompanyModal/AddCompanyModal";
+import { usePathname } from "next/navigation";
+import ReusableModals from "../ReusableModals/ReusableModals";
 
 const ManageBlock = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleBtnName = () => {
+    if (pathname !== "/companies") return "Add promotion";
+    if (pathname === "/companies") return "Add company";
+  };
 
   return (
     <div className="flex justify-between mb-8 px-10 pt-10">
@@ -25,15 +32,15 @@ const ManageBlock = () => {
         />
       </div>
       <button
-        className="flex w-[148px] h-11 py-2.5 px-5 bg-[#111827] rounded-[4px] outline-none font-jakarta font-medium text-base text-[#fafafa]"
+        className="flex justify-center w-[157px] h-11 py-2.5 px-5 bg-[#111827] rounded-[4px] outline-none font-jakarta font-medium text-base text-[#fafafa]"
         onClick={() => {
           setIsOpen(true);
         }}
       >
-        Add company
+        {handleBtnName()}
       </button>
       {isOpen && (
-        <AddCompanyModal
+        <ReusableModals
           setIsOpen={() => {
             setIsOpen(false);
           }}

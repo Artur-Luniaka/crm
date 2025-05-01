@@ -5,6 +5,7 @@ import icon from "../../../../public/company_icon.svg";
 import check_icon from "../../../../public/check.svg";
 import x_icon from "../../../../public/x-mark-red.svg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 enum Status {
   Active = "Active",
@@ -30,6 +31,13 @@ const colors = [
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
 const CompaniesInfoTable = () => {
+  const router = useRouter();
+
+  const handleOpenCompanyById = (company: string) => {
+    const slug = company.toLowerCase().replace(/\s+/g, "-");
+    router.push(`companies/${slug}`);
+  };
+
   return (
     <div>
       <div className="flex justify-between mb-5 px-2">
@@ -59,6 +67,10 @@ const CompaniesInfoTable = () => {
             className="flex justify-between items-center mb-2 last:mb-0 bg-[#fafafa] py-5 px-3 rounded-[4px]"
             style={{
               borderLeft: `4px solid ${randomColor}`,
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              handleOpenCompanyById(item.Company);
             }}
           >
             <div className="flex flex-shrink-0 flex-grow-0 w-[60px]">

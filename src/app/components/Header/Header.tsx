@@ -2,13 +2,19 @@
 
 import { usePathname } from "next/navigation";
 import UserData from "../UserData/UserData";
+import companyName from "@/fakeAPI/companiesInfo.json";
 
 const Header = () => {
   const pathname = usePathname();
 
+  const company = companyName.find(
+    (item) => item.Company === "Costco Wholesale"
+  );
+
   const handlePageTitle = () => {
     if (pathname === "/dashboard") return "Dashboard";
     if (pathname === "/companies") return "Companies";
+    if (pathname !== "/dashboard" && "/companies") return `${company?.Company}`;
   };
 
   return (
