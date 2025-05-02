@@ -27,7 +27,7 @@ const Modal = ({ children, setIsOpen }: ModalProp) => {
 
   return (
     <div
-      className="fixed top-0 left-0 flex justify-center items-center h-[100vh] w-full bg-black/60"
+      className="fixed top-0 left-0 flex justify-center items-center h-[100vh] w-full z-20 bg-black/60"
       onClick={setIsOpen}
     >
       <div
