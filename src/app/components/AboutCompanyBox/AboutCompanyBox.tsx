@@ -7,9 +7,7 @@ const AboutCompanyBox = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div className="flex flex-col w-full px-10 pb-10 bg-[#ffffff]">
-      {children}
-    </div>
+    <div className="flex w-full gap-5 px-10 pb-10 bg-[#ffffff]">{children}</div>
   );
 };
 
